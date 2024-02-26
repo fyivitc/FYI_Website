@@ -29,11 +29,11 @@ function Navbar() {
     <div className='nav'>
                 <div className="svg">
                     <svg >
-                        <line x1="3%" y1="3%" x2="97%" y2="3%" stroke="white" strokeWidth="2" width="2000" />
+                        <line className='line1' x1="3%" y1="3%" x2="97%" y2="3%" stroke="white" strokeWidth="2"  />
                         <circle r=".6%" cx="3%" cy="3%" fill="white" />
-                        <line x1="97%" y1="3%" x2="83%" y2="45%" stroke="white" strokeWidth="2" width="2000" />
+                        <line className='line2' x1="97%" y1="3%" x2="83%" y2="45%" stroke="white" strokeWidth="2"  />
                         <circle r=".6%" cx="83%" cy="45%" fill="white" />
-                        <line x1="97%" y1="3%" x2="97%" y2="95%" stroke="white" strokeWidth="2" width="2000" />
+                        <line className='line3' x1="97%" y1="3%" x2="97%" y2="95%" stroke="white" strokeWidth="2"  />
                         <circle r=".6%" cx="97%" cy="95%" fill="white" />
                     </svg>
                 </div>
