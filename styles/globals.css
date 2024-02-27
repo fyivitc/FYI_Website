@@ -2,32 +2,382 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+
+  *{
+    font-family:"cursive",monospace;
   }
-}
+  
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  :root {
+    --left: #FE8984;
+    --right: #16A8AC;
+    --color1: #FFFFFF;
+    --color2: black;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .card {
+    background-color: #282828;
+    border-radius: 1rem;
+    margin: 1rem;
+    width: 25vw;
+    height: 50vh;
+    transition: transform .3s linear;
+    -webkit-transition: transform .3s linear;
+    -moz-transition: transform .3s linear;
+    -ms-transition: transform .3s linear;
+    -o-transition: transform .3s linear;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+
+  .founder_img {
+    height: 13vw;
+    margin: 2rem 0 2rem 20%;
+  }
+
+  .card-body {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .card-body h5 {
+    font-size: 2rem;
+  }
+
+  .img {
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    background-color: #1da0f1;
+  }
+
+  .img img {
+    margin-top: 1.3vh;
+    margin-left: 25%
+  }
+
+
+
+  .back {
+    text-align: left;
+    margin-left: 4%;
+    margin-top: 5%;
+    width: 92%;
+    height: 90%;
+    display: none;
+    transform: rotateY(180deg);
+    font-size: 1.3rem;
+    border-style: solid;
+    border-color: white;
+    border-width: .01rem;
+    border-radius: .5rem;
+
+  }
+
+  .back p {
+    padding: 10%;
+  }
+
+
+  .nav {
+    background-image: linear-gradient(to right, var(--left), var(--right));
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin: 5vh;
+  }
+
+  .logo img {
+    height: 15%;
+    cursor: pointer;
+    transition: all 0.4s linear;
+  }
+
+  .logo img:hover {
+    transform: scale(1.1);
+  }
+
+  .head {
+    margin-right: 8%;
+    margin-top: 8vh;
+  }
+
+  .head a {
+    color: var(--color1);
+    font-size: 1.3rem;
+    margin-right: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.4s linear;
+
+  }
+
+  .head a:hover {
+    transform: scale(1.1);
+    color: var(--color2);
+    -webkit-transform: scale(1.1);
+  }
+
+  .svg {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .svg svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .svg svg .line1{
+    stroke-dasharray: 1430;
+    animation: line1 3s ease;
+  }
+  .svg svg .line2{
+    stroke-dasharray: 384;
+    animation: line2 3s ease;
+  }
+  .svg svg .line3{
+    stroke-dasharray: 713;
+    animation: line3 3s ease;
+  }
+
+  @keyframes line1 {
+    from{
+      stroke-dashoffset: -1430;
+    }
+    to{
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes line2 {
+    from{
+      stroke-dashoffset: 384;
+    }
+    to{
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes line3 {
+    from{
+      stroke-dashoffset: 713;
+    }
+    to{
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .heading {
+    position: absolute;
+    color: var(--color1);
+    top: 35vh;
+    left: 17%;
+    font-size: 3rem;
+  }
+
+  .label {
+    position: absolute;
+    color: #D7D7D7;
+    bottom: 9vh;
+    right: 9vh;
+    font-size: 1rem;
+    text-align: right;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .founders {
+    background-color: black;
+    color: #FFFFFF;
+  }
+
+  .founders h1 {
+    padding: 3rem 0rem 5rem 3rem;
+    padding-top: 5rem;
+    font-size: 3rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 3rem;
+  }
+
+  .about {
+    padding: 5rem 5rem 8rem 5rem;
+  }
+
+  .about_display{
+    display: flex;
+  }
+
+  .about h1 {
+    font-size: 4.5rem;
+  }
+
+  .about p {
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #A5A5A5;
+  }
+
+  .line {
+    width: 95%;
+    height: 2px;
+    background-color: #A5A5A5;
+    margin: auto;
+  }
+
+  .about img {
+    height: 18rem;
+  }
+
+
+  @media only screen and (max-width: 800px) {
+    .card {
+      margin: .2rem;
+      width: 40vw;
+      height: 50vh;
+    }
+
+    .founder_img {
+      height: 20vw;
+    }
+
+    .img {
+      margin-top: 5%;
+    }
+
+    .img img {
+      margin-top: 1.5vh;
+      margin-left: 28%;
+    }
+
+    .card-body {
+      margin-top: 10%;
+    }
+
+    .card-body h5 {
+      font-size: 1.5rem;
+    }
+
+    .head {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+      position: absolute;
+      top: 8%;
+      right: 8vh;
+    }
+
+    .hamburger img {
+      height: 1.6rem;
+      color: #D7D7D7;
+    }
+
+
+    .heading {
+      font-size: 2rem;
+      left: 10%;
+    }
+
+    .logo img {
+      height: 10%;
+    }
+
+    .label {
+      right: 4vh;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding: 1rem;
+    }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      padding-left: 5%;
+      padding-top: 10%;
+    }
+
+    .about_display p{
+      font-size: 1rem;
+    }
+
+    .about h1{
+      font-size: 2.5rem;
+    }
+
+  }
+
+  @media only screen and (max-width: 1000px) {
+
+    .container{
+      padding: 1rem;
+    }
+
+    .img{
+      margin: auto;
+      margin-top: 10%;
+    }
+
+    .img img{
+      margin: auto;
+      padding-top: 15%;
+    }
+
+    .card-body{
+      display: block;
+      margin-left: 10%;
+    }
+
+    .card-body h5{
+      font-size: 1.5rem
+    }
+
+    .about_display{
+      flex-direction: column-reverse;
+    }
+
+    .about_display h1{
+      margin-top: 10%;
+      font-size: 3rem;
+    }
+
+    .about_display img{
+      margin: auto;
+      width: 40vw;
+      height:  40vw;
+    }
+
+    .back{
+      font-size: .6rem;
+    }
+
   }
 }
