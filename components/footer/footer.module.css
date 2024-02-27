@@ -1,0 +1,82 @@
+.inputField {
+  width: 400px;
+  height: 40px;
+  border-radius: 8px;
+  border: 0;
+  padding: 0 1rem;
+}
+
+.messageBox {
+  width: 400px;
+  height: 111px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+.inputField,
+.messageBox {
+  display: block;
+  width: 400px;
+  margin-top: 0;
+}
+
+.label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.footerHeadline {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.followUs {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#footer {
+  font-family: "Inter", sans-serif;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.formTopMargin {
+  margin-top: 37px;
+}
+
+.copyRight {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 41px;
+  font-family: "Inter", sans-serif;
+}
+
+@media (max-width: 1165px) {
+  .formContainer {
+    flex-direction: column;
+  }
+
+  .verticalLine {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .responsive {
+    flex-direction: column;
+    align-items: center;
+  }
+  .followUs {
+    margin-top: 35px;
+  }
+  .customResponsiveness {
+    margin-left: 0;
+  }
+}
