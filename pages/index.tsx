@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className={styles.container}>
+      {/* <div className={styles.container}>
         <div className={styles.iphone}>
           <Image
             src="/Frame.svg"
@@ -46,7 +46,7 @@ export default function Home() {
             alt="iPhone background"
           />
         </div>
-      </div>
+      </div> */}
       <Footer />
     </>
 
