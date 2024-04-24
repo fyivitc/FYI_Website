@@ -46,11 +46,17 @@ function Navbar() {
                     <a href="#">Gallery</a>
                     <a href="#About">About</a>
                 </div>
-                <div className="hamburger">
+                <div className="hamburger z-50">
                     <img src="/images/hamburger.png" alt="" />
                 </div>
-                <div className="heading">
-                    <h1>FYI CLUB</h1>
+                <div className="heading ">
+                    <h1>FRATERNITY 
+                        <br />
+                        OF
+                        <br />
+                        YOUNG 
+                        <br />
+                        INNOVATORS</h1>
                 </div>
                 <div className="label">
                     <h2>Be Smart</h2>
