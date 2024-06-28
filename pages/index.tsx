@@ -2,10 +2,10 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Hero from "../components/Hero/Hero"
+import Hero from "../components/Hero/Hero";
 import Footer from "@/components/footer/footer";
+import MemberSection from "../components/MemberSection/MemberSection";
 import styles from "../styles/Home1.module.css";
-
 
 export default function Home() {
   return (
@@ -47,9 +47,9 @@ export default function Home() {
           />
         </div>
       </div> */}
+      <MemberSection />
       <Footer />
     </>
-
   );
 }
 
