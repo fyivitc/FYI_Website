@@ -9,7 +9,7 @@ const MemberCard = ({ ...props }) => {
           <div
             className={`${styles.flip_card_front} overflow-hidden flex flex-col`}
           >
-            <div className="rounded-full h-64 w-64 overflow-hidden self-center z-10 ">
+            <div className="rounded-full h-[65%] aspect-square overflow-hidden self-center z-10 ">
               <img
                 src={props.imageUrl}
                 alt="Avatar"
