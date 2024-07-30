@@ -6,11 +6,14 @@ import Hero from "../components/Hero/Hero";
 import Footer from "@/components/footer/footer";
 import MemberSection from "../components/MemberSection/MemberSection";
 import styles from "../styles/Home1.module.css";
+import Gallery from "../components/Gallery/Gallery";
+
 
 export default function Home() {
   return (
     <>
-      <Hero />
+    <Gallery/> 
+      {/* <Hero /> */}
       {/* <div className={styles.container}>
         <div className={styles.iphone}>
           <Image
@@ -47,8 +50,8 @@ export default function Home() {
           />
         </div>
       </div> */}
-      <MemberSection />
-      <Footer />
+      {/* <MemberSection /> */}
+      {/* <Footer /> */}
     </>
   );
 }
